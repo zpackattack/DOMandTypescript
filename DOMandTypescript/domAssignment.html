@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Trey Zaccour Homework</title>
+        <style>
+            body
+            {
+                background-color: blanchedalmond;
+            }
+            h1
+            {
+                text-align: center;
+            }
+            div
+            {
+                padding-top: 20px;
+                padding-bottom: 10px;
+            }
+            .spanDiv
+            {
+                border: 1px solid black;
+                border-radius: 4px;
+                margin: auto;
+                padding: 10px;
+            }
+            input
+            {
+                background-color:blanchedalmond;
+                padding-left: 3px;
+                padding-right: 3px;
+                border: 1px solid black;
+                border-radius: 4px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>Trey Zaccour DOM Homework</h1>
+        <div>
+            <label for="someText">Enter Some Text:</label>
+            <input type="text" id="someText" name="someText" placeholder="Some Text">
+            <button onclick="go('someText1', 'someText')">Go</button> 
+        </div>
+        <div class="spanDiv">
+            <span id="someText1"></span>
+        </div>
+        <div>
+            <label for="someTextI2">Enter Some More Text:</label>
+            <input type="text" id="someTextI2" name="someTextI2" placeholder="Some more Text">
+            <button onclick="go('someText2', 'someTextI2')">Go</button> 
+        </div>
+        <div class="spanDiv">
+            <span id="someText2"></span>
+        </div>
+        <div>
+            <label for="someTextI3">Enter Some Different Text:</label>
+            <input type="text" id="someTextI3" name="someTextI3" placeholder="Some different Text">
+            <button onclick="go('someText3', 'someTextI3')">Go</button> 
+        </div>
+        <div class="spanDiv">
+            <span id="someText3"></span>
+        </div>
+
+        <script>
+            function go(theId, inId)
+            {
+                let ele = document.getElementById(theId);
+
+                if(ele!=null)
+                {
+                    ele.innerHTML = document.getElementById(inId).value;
+                }
+            }
+        </script>
+    </body>
+</html>
